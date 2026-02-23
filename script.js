@@ -1,35 +1,29 @@
-body {
-    font-family: Arial, sans-serif;
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
+function calculate() {
+    // Получаем значения из формы
+    const input1 = parseFloat(document.getElementById('input1').value);
+    const input2 = parseFloat(document.getElementById('input2').value);
 
-h1 {
-    text-align: center;
-}
+    // Проверка на корректность ввода
+    if (isNaN(input1) || isNaN(input2)) {
+        document.getElementById('output').innerHTML = "Please enter valid numbers.";
+        return;
+    }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    // Здесь вставь свою формулу, например:
+    // const result = input1 + input2; // пример простого вычисления
+    const result = input1 * input2; // пока умножение как пример
 
-input {
-    padding: 5px;
-    font-size: 16px;
-}
+    // Простейшая классификация результата
+    let category = "";
+    if (result < 10) {
+        category = "Low";
+    } else if (result < 50) {
+        category = "Medium";
+    } else {
+        category = "High";
+    }
 
-button {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#output {
-    margin-top: 20px;
-    font-weight: bold;
-    text-align: center;
+    // Вывод результата
+    document.getElementById('output').innerHTML = 
+        `Hello! Your result is: ${result} <br> Category: ${category}`;
 }
