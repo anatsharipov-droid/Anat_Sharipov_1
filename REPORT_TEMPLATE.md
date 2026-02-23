@@ -1,118 +1,103 @@
-# Personal Assignment 1 Report Template
+1. Project Overview
 
-## 1. Project Overview
+Project Name:
+Simple Multiplication Calculator
 
-**Project Name:**  
-(write your project name)
+What does your calculator do?
+The calculator multiplies two numbers entered by the user and shows the result. It also classifies the result into categories: “Small value”, “Moderate value”, and “Large value”, and displays a personalized message with the user’s name.
 
-**What does your calculator do?**  
-(Explain in 2–3 sentences what problem you are solving and what you calculate.)
+2. Inputs
+Input Name	Unit	What it Represents
+Name	text	User’s name, for personalization
+First number	number	First value to multiply
+Second number	number	Second value to multiply
 
-Example:  
-This calculator calculates Body Mass Index (BMI) using weight and height. It also classifies the result into health categories.
+Explanation:
+I chose these inputs to demonstrate a simple calculation using two numbers, and the name field adds a personalized touch. The numbers are important because they are used in the main calculation — multiplication — and the name makes the output user-friendly.
 
----
+3. Process (Calculation Logic)
 
-## 2. Inputs
+Formula or Calculation Used:
+result = First number × Second number
 
-List and explain all inputs you used.
+Steps:
 
-| Input Name | Unit | What it Represents |
-|---|---|---|
-| Example: Weight | kg | User body weight |
-| Example: Height | cm | User height |
+Get input values from HTML using document.getElementById(...).value
 
-Explain in words:  
-(Why did you choose these inputs? Why are they important?)
+Convert values to numbers using parseFloat()
 
----
+Perform the multiplication
 
-## 3. Process (Calculation Logic)
+Store the result in a variable
 
-**Formula or Calculation Used:**  
-(Write your formula or explain how calculation works.)
+Determine the category using if/else
 
-Example:  
-BMI = weight / (height in meters)^2
+Display the result in HTML with a personalized message
 
-**Steps:**
-1. Get input values from HTML  
-2. Convert values if needed (example: cm → meters)  
-3. Perform calculation  
-4. Store result in variable  
+4. Conditional Logic (if / else)
 
----
+Interpretation rules:
 
-## 4. Conditional Logic (if / else)
+If result < 10 → “Small value”
 
-Explain how your program interprets the result.
+If result ≥ 10 and < 50 → “Moderate value”
 
-Example:
+If result ≥ 50 → “Large value”
 
-If BMI < 18.5 → Underweight  
-If BMI 18.5 – 24.9 → Normal  
-If BMI ≥ 25 → Overweight  
+Reasoning:
+The categories are chosen to clearly divide results into three ranges. This helps the user quickly understand whether the result is low, moderate, or high.
 
-Explain why you chose these ranges (if using real model, mention it).
+5. Output
 
----
+The program shows the user:
 
-## 5. Output
+A personalized message with their name
 
-What does your program show to the user?
+The multiplication result
 
-- Calculated value  
-- Category or interpretation  
-- Personalized message (if used)  
-- Optional: binary output (if implemented)
+The category of the result
 
----
+Example output:
+Hello, Anat! You multiplied 1 × 2 = 2. Category: Small value.
 
-## 6. Edge Cases / Unusual Inputs
+6. Edge Cases / Unusual Inputs
 
-What happens if:
+User enters zero: Result will be 0, category “Small value”
 
-- User enters zero?  
-- User enters negative number?  
-- User leaves input empty?  
+User enters negative numbers: Calculated as usual, category determined by range
 
-Explain how your program handles this.
+User leaves input empty: Shows message “Please enter a valid name and numbers”
 
----
+7. Optional Features (If You Added Any)
 
-## 7. Optional Features (If You Added Any)
+Input validation (required fields, numeric check)
 
-Examples:
-- Binary conversion  
-- Extra calculations  
-- Extra UI features  
-- Validation messages  
+Personalized message using user’s name
 
----
+Categorization of results for clarity
 
-## 8. How to Run the Project
+8. How to Run the Project
 
-1. Download or clone repository  
-2. Open `index.html` in browser  
-3. Enter input values  
-4. Click calculate button  
+Download or clone the repository
 
----
+Open index.html in a browser
 
-## 9. AI Usage (If Used)
+Enter your name and two numbers
 
-Did you use AI tools?  
-(Yes / No)
+Click the Calculate button
 
-If yes, explain briefly:
-- What you asked AI for  
-- What you modified yourself  
-- What you fully understand now  
+The result will appear on the page
 
----
+9. AI Usage (If Used)
 
-## 10. Reflection
+Yes
 
-What did you learn from this assignment?
+Asked AI for an HTML/JS/CSS calculator template
 
-(2–4 sentences)
+Modified the code to add Russian/English labels, personalization, and categories
+
+Fully understand how variables, if/else logic, and result output work
+
+10. Reflection
+
+I learned how to create a simple web calculator using HTML, CSS, and JavaScript. I understood how to read form inputs, perform calculations, and classify results using if/else. I also learned to display personalized messages and handle input validation.
