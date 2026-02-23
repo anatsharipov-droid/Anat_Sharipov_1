@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Personal Calculator</h1>
+    <form id="calculatorForm">
+        <label for="input1">Input 1:</label>
+        <input type="number" id="input1" required>
 
-<h1>Personal Calculator</h1>
+        <label for="input2">Input 2:</label>
+        <input type="number" id="input2" required>
 
-<form id="calculatorForm">
-    <!-- Add input fields here -->
-</form>
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
 
-<div id="output">
-    <!-- Results will be displayed here -->
-</div>
+    <div id="output"></div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
