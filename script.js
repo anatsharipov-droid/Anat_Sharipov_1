@@ -1,29 +1,28 @@
 function calculate() {
-    // Получаем имя и значения из формы
     const name = document.getElementById('name').value;
     const input1 = parseFloat(document.getElementById('input1').value);
     const input2 = parseFloat(document.getElementById('input2').value);
 
-    // Проверка на корректность ввода
     if (!name || isNaN(input1) || isNaN(input2)) {
         document.getElementById('output').innerHTML = "Please enter a valid name and numbers.";
         return;
     }
 
-    // Пример формулы (можно заменить на любую)
     const result = input1 * input2;
 
-    // Классификация результата
+    // Более описательные категории
     let category = "";
     if (result < 10) {
-        category = "Low";
+        category = "Small value";
     } else if (result < 50) {
-        category = "Medium";
+        category = "Moderate value";
     } else {
-        category = "High";
+        category = "Large value";
     }
 
-    // Вывод результата с персонализированным сообщением
+    // Понятный вывод
     document.getElementById('output').innerHTML = 
-        `Hello, ${name}! Your result is: ${result} <br> Category: ${category}`;
+        `Hello, ${name}!<br>
+        You multiplied ${input1} × ${input2} = <strong>${result}</strong>.<br>
+        Category: <strong>${category}</strong>`;
 }
