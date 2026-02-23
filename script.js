@@ -1,19 +1,19 @@
 function calculate() {
-    // Получаем значения из формы
+    // Получаем имя и значения из формы
+    const name = document.getElementById('name').value;
     const input1 = parseFloat(document.getElementById('input1').value);
     const input2 = parseFloat(document.getElementById('input2').value);
 
     // Проверка на корректность ввода
-    if (isNaN(input1) || isNaN(input2)) {
-        document.getElementById('output').innerHTML = "Please enter valid numbers.";
+    if (!name || isNaN(input1) || isNaN(input2)) {
+        document.getElementById('output').innerHTML = "Please enter a valid name and numbers.";
         return;
     }
 
-    // Здесь вставь свою формулу, например:
-    // const result = input1 + input2; // пример простого вычисления
-    const result = input1 * input2; // пока умножение как пример
+    // Пример формулы (можно заменить на любую)
+    const result = input1 * input2;
 
-    // Простейшая классификация результата
+    // Классификация результата
     let category = "";
     if (result < 10) {
         category = "Low";
@@ -23,7 +23,7 @@ function calculate() {
         category = "High";
     }
 
-    // Вывод результата
+    // Вывод результата с персонализированным сообщением
     document.getElementById('output').innerHTML = 
-        `Hello! Your result is: ${result} <br> Category: ${category}`;
+        `Hello, ${name}! Your result is: ${result} <br> Category: ${category}`;
 }
