@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Calculator</title>
+    <title>Simple Product Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Personal Calculator</h1>
+    <h1>Simple Product Calculator</h1>
+    <p>Enter your name and two numbers. The calculator will multiply them and show the result along with a category.</p>
+
     <form id="calculatorForm">
         <label for="name">Name:</label>
         <input type="text" id="name" placeholder="Enter your name" required>
 
-        <label for="input1">Input 1:</label>
-        <input type="number" id="input1" required>
+        <label for="input1">First number:</label>
+        <input type="number" id="input1" placeholder="Enter first number" required>
 
-        <label for="input2">Input 2:</label>
-        <input type="number" id="input2" required>
+        <label for="input2">Second number:</label>
+        <input type="number" id="input2" placeholder="Enter second number" required>
 
         <button type="button" onclick="calculate()">Calculate</button>
     </form>
